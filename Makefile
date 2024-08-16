@@ -4,6 +4,10 @@ install:
 
 test:
 	python -m pytest -vv --cov=main test_*.py
+	# python -m pytest --nbval notebook.ipynb	#if you need to test a jupyter notebook
+
+debug:
+	python -m pytest -vv --pdb
 
 format:
 	black *.py
