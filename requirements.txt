@@ -42,4 +42,7 @@ torch==1.12.1
 torchvision==0.13.1
 tensorflow==2.10.0
 
+#image processing
+Pillow==9.2.0
+
 

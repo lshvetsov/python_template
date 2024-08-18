@@ -1,7 +1,6 @@
 from transformers import pipeline
 import gradio as gr
 import numpy as np
-from PIL import Image
 
 # Load the model
 model = pipeline(
