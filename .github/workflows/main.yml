@@ -1,12 +1,15 @@
 name: Python application test with Github Actions
 
-on: [push]
+on:
+  push:
+    branches: [main]
+
+  # to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
@@ -25,5 +28,22 @@ jobs:
     - name: Format code
       run: |
         make format
+  
+  deploy:
+    needs: build  # This line ensures deploy only runs if build is successful
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Setup Git LFS
+        run: git lfs install    
+      - name: Add remote 
+        env:
+          HF: ${{ secrets.HUGGING_FACE_SECRET }}
+        run: git remote set-url origin https://lshvetsov:${HF}@huggingface.co/spaces/lshvetsov/test
+      - name: Push to hub
+        run: git push --force origin main
     
     

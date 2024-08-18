@@ -1,6 +1,6 @@
-Template for python projects with Makefile and GitHub actions---
+---
 title: Template
-emoji: 
+emoji: 🌖
 colorFrom: purple
 colorTo: purple
 sdk: gradio
