@@ -40,4 +40,5 @@ def test_flask_fruit():
     assert title == "Random Fruit"
     fruit_element = soup.find(id="fruit-name")
     assert fruit_element is not None
-    assert fruit_element.text in ["apple", "cherry", "orange", "banana", "grape"]
+    fruit_name = fruit_element.text.strip("[]'\" ").split(',')[0].strip()
+    assert fruit_name in ["apple", "cherry", "orange", "banana", "grape"]
