@@ -1,8 +1,8 @@
 from fastapi.testclient import TestClient as FastTestClient
 from flask.testing import FlaskClient as FlaskTestClient
 from bs4 import BeautifulSoup
-from fastapi import app as fastapi_app
-from flask import app as flask_app
+from fastapi_app import app as fastapi_app
+from flask_app import app as flask_app
 
 fastapi_client = FastTestClient(fastapi_app)
 

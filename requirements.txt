@@ -11,6 +11,7 @@ fastapi==0.85.0
 uvicorn==0.18.3
 flask==2.3.3
 bs4==0.0.2
+supervisor==4.0.0
 
 #datascience
 jupyter==1.0.0
