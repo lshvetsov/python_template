@@ -3,7 +3,7 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main test_*.py
+	python -m pytest -vv --cov=fastapi --cov=flask test.py
 	# python -m pytest --nbval notebook.ipynb	#if you need to test a jupyter notebook
 
 debug:

@@ -9,6 +9,8 @@ boto3==1.24.87
 #web
 fastapi==0.85.0
 uvicorn==0.18.3
+flask==2.3.3
+bs4==0.0.2
 
 #datascience
 jupyter==1.0.0
@@ -41,8 +43,5 @@ tokenizers==0.12.1
 torch==1.12.1
 torchvision==0.13.1
 tensorflow==2.10.0
-
-#image processing
-Pillow==9.2.0
 
 
